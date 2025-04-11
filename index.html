@@ -1,67 +1,48 @@
 <!DOCTYPE html>
-<html lang="id"> <!- to define the page languages -->
+<html lang="en">
 <head>
-<title> Khezia's practice HTML </title>
-</head>
-<body style="background-color:rgba(255, 99, 71, 0.4);">
 
-<h1> Testing heading, you can add between H1-H6. </h1>
-<hr> <!- to add line page break -->
-<br>
-<p style="color:blue;"> Testing font-color </p>
-<p style="font-family:helvetica;"> Testing font </p> 
-<p style="font-size:300%;"> Testing font-size </p>
-<p style="text-align:center;"> Testing text align </p>
-<b>Testing bold text </b> <br><br>
-<strong>Testing important text </strong> <br><br> <!- both bold and important are the same look.
-<p> <i> Testing italic text </i> </p>
-<p> <em>Testing emphasized text </em>
-<p> Testing <mark>marked text</mark> </p>
-<p> Testing <del>marked text</del> </p>
-<p> Testing <del>marked</del> <ins>text</ins> </p>
-<p> Testing <sub>marked text</sub> </p>
-<p> Testing <sup>marked text</sup> </p>
-<p> <small> Testing smaller text </small> </p>
-<pre> Testing
- How text shows the
- exact format text
- using pre
-</pre>
-<style> <!- to spesifically design the link color -->
-a:link {
-color: yellow;
-background-color: transparent;
-text-decoration: italic;
+	<meta charset="UTF-8">
+	<title>D16042021K</title>
+
+<link href="https://fonts.cdnfonts.com/css/romantic" rel="stylesheet">
+                
+<style>
+	body {
+	background-color: black;
+	margin: 0;
+	padding: 0'
+	}
+
+h1 {
+	font-family: 'Romantic', sans-serif;
+	color: black;
+	text-align: center;
+	font-size: 3em;
+	margin-top: 20vh;
+	animation: fadeIn 3s ease-in-out;
 }
-a:visited {
-color: black;
-background-color: transparent;
-text-decoration: underline;
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(-30px);
 }
-a:hover {
-color: red;
-background-color: transparent;
-text-decoration: underline;
+to {
+opacity: 1;
+transform: translateY(0);
 }
+}
+
 </style>
-<p> Testing hyperlink <a href="https://msha.ke/kheziapermana">portfolio</a> </p>
-<p> Testing image </p> <img src="images (1).jpeg" alt="test image" width="200" height="200">
-<blockquote cite="https://www.worldwildlife.org/about">
-Testing blockquote from other web <br> WWF works to help local communities conserve the natural resources they depend upon; transform markets and policies toward sustainability; and protect and restore species and their habitats. <br> Our efforts ensure that the value of nature is reflected in decision-making from a local to a global scale.
-</blockquote>
-<p>Testing <abbr title="acronym">A</abbr></p>
-<p>Testing: <q>quote text.</q> </p>
-<address>
-Testing address<br>
-Written by Khezia Permana.<br>
-Visit me at:<br>
-msha.ke/kheziapermana<br>
-Jkt, ID<br>
-</address>
-<p><cite>Testing cite used for a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.)</cite></p>
-<bdo dir="rtl">Testing override text</bdo>
-<p style="border: 2px solid black;">testing border text </p>
-<button onclick="document.location='default.asp'">HTML Tutorial</button>
+</head>
+<body style="background-color:rgba(255, 99, 71, 0.4)";>
+
+<h1> Happy Fourth Anniversary, Love! </h1>
+
+<audio autoplay loop hidden>
+  <source src="tgify.mp3" type="audio">
+</audio>
 
 </body>
 </html>
