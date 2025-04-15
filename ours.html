@@ -1,4 +1,4 @@
-fpositi<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -87,7 +87,7 @@ fpositi<!DOCTYPE html>
       animation: fadeIn 3s ease-in-out forwards;
       animation-delay: 1s;
       display: block;
-      margin: 30px auto;
+      margin: 10px auto;
       padding: 0.7rem 2rem;
       font-weight: 700;
       font-size: 18px;
@@ -108,15 +108,15 @@ fpositi<!DOCTYPE html>
     i {
       display: block;
       text-align: center;
-      margin: 30px auto;
+      margin: 5px auto 0 auto;
       font-size: 0.9em;
       color: black;
     }
     
     p {
       display: block;
-      text-align: center;
-      margin: 20px auto;
+      text-align: right;
+      margin: 139px 15px auto;
       font-size: 0.9em;
       color: black;
       bottom: 9px;
@@ -128,6 +128,16 @@ fpositi<!DOCTYPE html>
       user-select: none;
     }
 
+.fade-text {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: black;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+  animation-delay: 1s; /* sama kayak button */
+}
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
@@ -201,10 +211,11 @@ fpositi<!DOCTYPE html>
     <div class="typing-line">Searching for a way out</div>
   </div>
 
-  <i>P.S: No back button, cause there's no turning back. 😜</i>
+<div class="button-section">
+  <i class="fade-text">P.S: No back button, cause there's no turning back. 😜</i>
   <a href="counting.html" class="bn3637">Click here to continue counting</a>
+</div>
   <p>Khezia Permana © 2025</p>
 </body>
 
 </html>
-
