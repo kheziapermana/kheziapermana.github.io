@@ -213,7 +213,8 @@ body {
 
 <div class="button-section">
   <i class="fade-text">P.S: No back button, cause there's no turning back. 😜</i>
-  <a href="counting.html?playMusic=true" class="bn3637">Click here to continue counting</a>
+  <a href="counting.html?playMusic=true" class="bn3637" onclick="saveMusicState()">Click here to continue counting</a>
+
 
   <audio id="bgm" src="tgify.mp3"></audio>
 
@@ -227,11 +228,13 @@ body {
     if (shouldPlay === "true") {
       audio.currentTime = parseFloat(musicTime || 102);
       audio.play().catch(e => console.log('Autoplay blocked:', e));
-
-      localStorage.removeItem("playMusic");
-      localStorage.removeItem("musicTime");
     }
   });
+
+  function saveMusicState() {
+    localStorage.setItem("playMusic", "true");
+    localStorage.setItem("musicTime", audio.currentTime);
+  }
 </script>
 </div>
 </body>
