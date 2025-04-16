@@ -228,7 +228,6 @@ body {
       audio.currentTime = parseFloat(musicTime || 102);
       audio.play().catch(e => console.log('Autoplay blocked:', e));
 
-      // hapus data biar gak muter terus kalau buka ulang
       localStorage.removeItem("playMusic");
       localStorage.removeItem("musicTime");
     }
