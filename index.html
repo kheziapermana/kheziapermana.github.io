@@ -147,14 +147,12 @@ transform: translateY(0);
     audio.currentTime = 102;
     audio.play();
 
-    // simpan state musik ke localStorage
     localStorage.setItem("playMusic", "true");
     localStorage.setItem("musicTime", audio.currentTime);
 
-    // tunggu sebentar biar kedengeran
     setTimeout(() => {
       window.location.href = button.href;
-    }, 500); // atau 1000ms biar smooth
+    }, 1000);
   });
 </script>
   
