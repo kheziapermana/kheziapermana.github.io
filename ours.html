@@ -205,7 +205,27 @@ body {
 
 <div class="button-section">
   <i class="fade-text">P.S: No back button, cause there's no turning back. 😜</i>
-  <a href="counting.html" class="bn3637">Click here to continue counting</a>
+  <a href="counting.html?playMusic=true" class="bn3637">Click here to continue counting</a>
+
+  <audio id="bgm" src="tgify.mp3" autoplay></audio>
+
+<script>
+  const audio = document.getElementById('bgm');
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const shouldPlay = localStorage.getItem("playMusic");
+    const musicTime = localStorage.getItem("musicTime");
+
+    if (shouldPlay === "true") {
+      audio.currentTime = parseFloat(musicTime || 0);
+      audio.play().catch(e => console.log('Autoplay blocked:', e));
+
+      // hapus data biar gak muter terus kalau buka ulang
+      localStorage.removeItem("playMusic");
+      localStorage.removeItem("musicTime");
+    }
+  });
+</script>
 </div>
 </body>
 </html>
