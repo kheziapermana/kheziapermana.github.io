@@ -101,7 +101,25 @@
     }
 
     #main-content { display: none; }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+        margin: 15px 10px;
+      }
 
+      .loading-bar {
+        height: 25px;
+      }
+
+      .status {
+        font-size: 0.75em;
+      }
+
+      #main-content p {
+        font-size: 1em;
+        padding: 0 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -123,12 +141,24 @@
     <p style="text-align:center; font-family: 'Pixelify Sans', sans-serif; transform: translateY(-20px); pointer-events: none;
     user-select: none;">I love you so much, Defry Heryanto.💖</p>
   </div>
-
+<audio id="loveSong" src="tgify.mp3"></audio>
   <script>
     setTimeout(() => {
       document.getElementById('loader-wrapper').style.display = 'none';
       document.getElementById('main-content').style.display = 'block';
     }, 5300);
+</script>
+  
+    <script>
+  const audio = document.getElementById('bgm');
+
+    audio.currentTime = 102;
+    audio.play();
+
+    localStorage.setItem("playMusic", "true");
+    localStorage.setItem("musicTime", audio.currentTime);
+
+
   </script>
 </body>
 </html>
