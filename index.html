@@ -133,7 +133,25 @@ transform: translateY(0);
 <body style="background-color:rgba(255, 99, 71, 0.4);">
 <h1>Happy Fourth Anniversary, Love!</h1>
 <img src="KD.jpeg" alt="KD" width="500" height="500">
-<a href="ours.html" class="bn3637 bn38">Click here to see ours</a>
+<a href="ours.html" class="bn3637 bn38" id="continueBtn">Click here to see ours</a>
+<audio id="loveSong" src="tgify.mp3"></audio>
 
+<script>
+  const button = document.getElementById('continueBtn');
+  const audio = document.getElementById('loveSong');
+
+  button.addEventListener('click', function (e) {
+    e.preventDefault();
+    audio.play().then(() => {
+      setTimeout(() => {
+        window.location.href = 'ours.html';
+      }, 1000);
+    }).catch(error => {
+      console.log('Autoplay diblokir. Langsung redirect.', error);
+      window.location.href = 'ours.html';
+    });
+  });
+</script>
+  
 </body>
 </html>
