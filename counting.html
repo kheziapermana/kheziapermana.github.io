@@ -123,7 +123,22 @@
     <p style="text-align:center; font-size: 12px; font-family: 'Pixelify Sans', sans-serif; transform: translateY(-20px); pointer-events: none;
     user-select: none;">I love you so much <br> Defry Heryanto.💖</p>
   </div>
+<audio id="bgm" src="tgify.mp3" autoplay></audio>
+  <script>
+  const audio = document.getElementById("bgm");
 
+  window.addEventListener("DOMContentLoaded", () => {
+    const shouldPlay = localStorage.getItem("playMusic");
+    const musicTime = localStorage.getItem("musicTime");
+
+    if (shouldPlay === "true") {
+      audio.currentTime = parseFloat(musicTime || 102);
+      audio.play().catch(err => console.log("Autoplay blocked:", err));
+      localStorage.removeItem("playMusic");
+      localStorage.removeItem("musicTime");
+    }
+  });
+</script>
   <script>
     setTimeout(() => {
       document.getElementById('loader-wrapper').style.display = 'none';
