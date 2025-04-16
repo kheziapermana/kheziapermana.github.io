@@ -133,16 +133,12 @@ transform: translateY(0);
 <body style="background-color:rgba(255, 99, 71, 0.4);">
 <h1>Happy Fourth Anniversary, Love!</h1>
 <img src="KD.jpeg" alt="KD" width="500" height="500">
-<a href="ours.html?playMusic=true" class="bn3637 bn38" id="continueButton">Click here to see ours</a>
+<a href="ours.html?playMusic=true" class="bn3637 bn38">Click here to see ours</a>
 
 <audio id="bgm" src="tgify.mp3"></audio>
 
 <script>
-  const button = document.getElementById('continueButton');
   const audio = document.getElementById('bgm');
-
-  button.addEventListener('click', function (e) {
-    e.preventDefault();
 
     audio.currentTime = 102;
     audio.play();
@@ -150,10 +146,6 @@ transform: translateY(0);
     localStorage.setItem("playMusic", "true");
     localStorage.setItem("musicTime", audio.currentTime);
 
-    setTimeout(() => {
-      window.location.href = button.href;
-    }, 1000);
-  });
 </script>
   
 </body>
