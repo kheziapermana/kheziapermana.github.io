@@ -217,7 +217,7 @@ body {
     const musicTime = localStorage.getItem("musicTime");
 
     if (shouldPlay === "true") {
-      audio.currentTime = parseFloat(musicTime || 0);
+      audio.currentTime = parseFloat(musicTime || 85);
       audio.play().catch(e => console.log('Autoplay blocked:', e));
 
       // hapus data biar gak muter terus kalau buka ulang
